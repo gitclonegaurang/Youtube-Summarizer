@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self'; object-src 'self'"
+    />
+    <title>Your Extension Title</title>
+    <script src="axios.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/youtube-captions-scraper/dist/youtube-captions-scraper.js"></script> -->
+
+    <!-- <script src="youtube-captions-scraper.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/lodash/lodash.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/striptags/dist/strip-tags.umd.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/he/he.js"></script> -->
+
+    <script src="lodash.min.js"></script>
+    <script src="scriptags.js"></script>
+    <script src="he.js"></script>
+
+    <script src="youtube-captions-scraper.js"></script>
+    <script src="popup.js"></script>
+    <style>
+      * {
+        font-family: system-ui;
+        font-size: 17px;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0; /* Ensure there is no default margin */
+        padding: 0; /* Ensure there is no default padding */
+        display: flex; /* Use flex to center content */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        width: 34rem;
+        height: 1rem;
+      }
+
+      .main {
+        max-width: 600px; /* Set a max-width for the container */
+        /* width: 100%; Make it responsive */
+        margin: auto; /* Auto margins for horizontal centering */
+        /* padding: 20px; */
+        box-sizing: border-box; /* Include padding in the width calculation */
+        /* Other styles remain the same */
+        width: 34rem;
+      }
+
+      button {
+        font-size: 1rem; /* Increase font size for readability */
+        padding: 15px 30px; /* Increase padding for a larger button */
+        margin: 10px; /* Space out buttons */
+        cursor: pointer;
+        border: none;
+        background-color: #4caf4f00;
+        color: white;
+        border-radius: 4px; /* Rounded corners for buttons */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for buttons */
+        transition: all 0.2s ease; /* Smooth transition for button interactions */
+      }
+
+      button:hover,
+      button:focus {
+        /* background-color: #367c39; Darken button when hovered/focused */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Larger shadow on hover/focus */
+        outline: none; /* Remove outline on focus */
+        text-decoration: underline;
+      }
+
+      /* Ensure the buttons do not shrink or grow */
+      button {
+        flex-shrink: 0;
+        flex-grow: 0;
+      }
+
+      .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background: #001c27;
+        font-size: 25px;
+      }
+      footer {
+        display: flex;
+        align-items: center;
+      }
+      img {
+        height: 50px;
+        margin-left: 20px;
+      }
+      #getSummaryButton {
+        font-size: 25px;
+      }
+      .content {
+        padding: 25px;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="nav">
+        <img src="index.png" alt="index.png" />
+        <button id="getSummaryButton">Get Relevance</button>
+        <!-- <button id="getQuestionnaireButton">Questionnaire</button> -->
+        <!-- <button id="getBookmarkButton">Bookmark</button> -->
+      </div>
+      <div class="content">
+        <h1>Git R Done</h1>
+        <!-- <p id="relevenceIndexID"></p> -->
+        <p id="SummarySpace"></p>
+
+        <footer><p>Copyright © Team Git R Done 2024</p></footer>
+      </div>
+    </div>
+  </body>
+</html>

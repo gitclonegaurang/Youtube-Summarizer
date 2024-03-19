@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "YouTube Summary Extension",
+  "version": "1.0",
+  "description": "Get summaries of YouTube videos using OpenAI.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "https://www.youtube.com/*",
+    "https://www.googleapis.com/",
+    "<all_urls>"
+  ],
+  "browser_action": {
+    "default_icon": "Git R Done Logo.png",
+    "default_popup": "popup.html",
+    "default_title": "YouTube Summary Extension"
+  },
+  "icons": {
+    "48": "Git R Done Logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
